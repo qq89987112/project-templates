@@ -1,0 +1,12 @@
+{
+    "token":"crg",
+    "appID":"wx31f55f952b96bbce",
+    "appScrect":"354484e102ca0344f80b05e5494a1419",
+    "encodingAESKey":"afPsLj0rV0yGBtZRyWpGWTGFgsrvI40XBCZrnwUURFk",
+    "apiDomain":"https://api.weixin.qq.com/",
+    "apiURL":{
+        "accessTokenApi":"%scgi-bin/token?grant_type=client_credential&appid=%s&secret=%s",
+        "createMenu":"%scgi-bin/menu/create?access_token=%s",
+        "jsapi_ticket":"https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=%s&type=jsapi"
+    }
+}
