@@ -13,4 +13,4 @@
 ## 其他
 ### 缓存HTTP请求内容并作为MOCK使用 思路
     1.node服务器端利用onProxyRes事件缓存HTTP内容(无需使用filter过滤,客户端使用的是MOCK技术)
-    2.客户端通过mockjs、热加载 读取JSON文件进行MOCK。
+    2.客户端通过mockjs、热加载(还是手动刷新,热加载会有问题(刚请求了就给我刷新了？)) 读取JSON文件进行MOCK。
