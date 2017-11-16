@@ -1,44 +1,10 @@
-# 项目模板
-    详细代码请查看对应的分支
-    
-## vue-mobile-template
-    
-## vue-wechat-template
-- 创建测试号菜单
-- 返回临时的 js-sdk 配置信息
+# 组件
+## 组件可被删除
+## 后面可以插入内容
+## 重新编辑
+- 不同组件有不同的编辑框
 
-    
-    依旧使用vue-mobile-template,在build文件夹内添加wechat文件夹即可。
 
-## 其他
-### 缓存HTTP请求内容并作为MOCK使用 思路
-    1.node服务器端利用onProxyRes事件缓存HTTP内容(无需使用filter过滤,客户端使用的是MOCK技术)
-            
-          // 可以在simple-componet 中看到源码
-          // 生成的cache 可以供mockjs 使用(直接遍历即可)。
-          // let apiCache = require("./api-cache.json");
-          app.get("/api-cache", function (req, res) {
-            res.write(JSON.stringify(apiCache));
-            res.end();
-          });
-          options.onProxyRes = function (proxyRes, req, res) {
-            res.on('pipe', (data) => {
-              let
-                fs = require("fs"),
-                concat = require('concat-stream'),
-                s = concat(function (text) {
-                  apiCache[req.url] = JSON.parse(text.toString());
-                  fs.writeFileSync(path.join(__dirname, "./api-cache.json"), JSON.stringify(apiCache), 'UTF-8');
-                });
-              if (~proxyRes.headers['content-encoding'].indexOf('gzip')) {
-                let
-                  zlib = require('zlib');
-                  proxyRes.pipe(zlib.createGunzip()).pipe(s);
-              } else {
-                  proxyRes.pipe(s);
-              }
-            })
-          };
-          
-    2.客户端通过mockjs、手动刷新,(热加载会有问题(刚请求了就给我刷新了？)) 读取JSON文件进行MOCK。
-    3.需要刷新cache文件只要把mock关了即可。
+    可以把编辑框看成是组件属性的可视化操作。为进一步抽象提供可能
+## 可以被拖动
+## 组件需要判断是处于PC端的编辑模式还是微信端的展示模式
