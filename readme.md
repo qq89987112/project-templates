@@ -1,17 +1,12 @@
 # 项目模板
     详细代码请查看对应的分支
     
-## vue-mobile-template
-    
-## vue-wechat-template
-- 创建测试号菜单
-- 返回临时的 js-sdk 配置信息
+## PC端项目
+   - webstorm 热加载
+   - webstorm scss编译
 
-    
-    依旧使用vue-mobile-template,在build文件夹内添加wechat文件夹即可。
-
-## 其他
-### 缓存HTTP请求内容并作为MOCK使用 思路
+# 其他
+## 缓存HTTP请求内容并作为MOCK使用 思路
     1.node服务器端利用onProxyRes事件缓存HTTP内容(无需使用filter过滤,客户端使用的是MOCK技术)
             
           // 可以在simple-componet 中看到源码
