@@ -3,7 +3,7 @@ let
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     merge = require('webpack-merge'),
     path = require('path'),
-    PAGE_PATH = path.resolve(__dirname, '../src/pages');
+    PAGE_PATH = path.resolve('./src/pages');
 
     exports.entries = function () {
         var entryFiles = glob.sync(PAGE_PATH + '/*/*.js')
