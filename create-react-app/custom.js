@@ -11,6 +11,9 @@ let
 //     name: 'static/media/[name].[hash:8].[ext]',
 // },
 // },
+
+
+// 然后用webpackMerge一下
 module.exports = (type) => {
     let
         isDevelopment = type === 'development',
